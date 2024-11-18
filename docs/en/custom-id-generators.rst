@@ -23,9 +23,7 @@ are provided: ``doctrine.ulid_generator`` to generate ULIDs, and
 
     use Doctrine\ORM\Mapping as ORM;
 
-    /**
-     * @ORM\Entity
-     */
+    #[ORM\Entity]
     class User
     {
         #[ORM\Id]
@@ -38,5 +36,5 @@ are provided: ``doctrine.ulid_generator`` to generate ULIDs, and
     }
 
 See also
-https://www.doctrine-project.org/projects/doctrine-orm/en/2.8/reference/annotations-reference.html#annref_customidgenerator
+https://www.doctrine-project.org/projects/doctrine-orm/en/3.3/reference/attributes-reference.html#attrref_customidgenerator
 for more info about custom ID generators.
