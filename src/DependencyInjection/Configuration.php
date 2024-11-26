@@ -511,7 +511,7 @@ class Configuration implements ConfigurationInterface
                             ->defaultValue(! method_exists(ProxyFactory::class, 'resetUninitializedProxy'))
                             ->info('Enables the new implementation of proxies based on lazy ghosts instead of using the legacy implementation')
                         ->end()
-                        ->scalarNode('proxy_dir')->defaultValue('%kernel.cache_dir%/doctrine/orm/Proxies')->end()
+                        ->scalarNode('proxy_dir')->defaultValue('%kernel.build_dir%/doctrine/orm/Proxies')->end()
                         ->scalarNode('proxy_namespace')->defaultValue('Proxies')->end()
                         ->arrayNode('controller_resolver')
                             ->canBeDisabled()
