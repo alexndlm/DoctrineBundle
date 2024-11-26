@@ -519,7 +519,7 @@ class DoctrineExtensionTest extends TestCase
         $this->assertEquals(
             [
                 new Reference('doctrine.orm.default_entity_manager'),
-                '%kernel.cache_dir%/doctrine/orm/default_metadata.php',
+                '%kernel.build_dir%/doctrine/orm/default_metadata.php',
             ],
             $definition->getArguments(),
         );
