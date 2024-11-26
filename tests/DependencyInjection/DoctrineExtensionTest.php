@@ -528,7 +528,7 @@ class DoctrineExtensionTest extends TestCase
         $this->assertEquals(PhpArrayAdapter::class, $definition->getClass());
 
         $arguments = $definition->getArguments();
-        $this->assertSame('%kernel.cache_dir%/doctrine/orm/default_metadata.php', $arguments[0]);
+        $this->assertSame('%kernel.build_dir%/doctrine/orm/default_metadata.php', $arguments[0]);
         $wrappedDefinition = $arguments[1];
         $this->assertSame(ArrayAdapter::class, $wrappedDefinition->getClass());
 
