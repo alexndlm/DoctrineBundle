@@ -1,7 +1,3 @@
-.. index::
-   single: Doctrine; ORM Configuration Reference
-   single: Configuration Reference; Doctrine ORM
-
 Configuration Reference
 =======================
 
@@ -770,10 +766,6 @@ can control. The following configuration options exist for a mapping:
     is false if the existence check returns true. In this case an absolute path
     was specified and the metadata files are most likely in a directory outside
     of a bundle.
-
-.. index::
-    single: Configuration; Doctrine DBAL
-    single: Doctrine; DBAL configuration
 
 Filters Configuration
 ~~~~~~~~~~~~~~~~~~~~~
