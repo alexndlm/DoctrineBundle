@@ -26,6 +26,7 @@ class TestCase extends BaseTestCase
             'kernel.debug' => false,
             'kernel.bundles' => ['XmlBundle' => 'Fixtures\Bundles\XmlBundle\XmlBundle'],
             'kernel.cache_dir' => sys_get_temp_dir(),
+            'kernel.build_dir' => sys_get_temp_dir(),
             'kernel.environment' => 'test',
             'kernel.root_dir' => __DIR__ . '/../../../../', // src dir
             'kernel.project_dir' => __DIR__ . '/../../../../', // src dir

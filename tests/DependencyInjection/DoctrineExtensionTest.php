@@ -519,7 +519,7 @@ class DoctrineExtensionTest extends TestCase
         $this->assertEquals(
             [
                 new Reference('doctrine.orm.default_entity_manager'),
-                '%kernel.cache_dir%/doctrine/orm/default_metadata.php',
+                '%kernel.build_dir%/doctrine/orm/default_metadata.php',
             ],
             $definition->getArguments(),
         );
@@ -528,7 +528,7 @@ class DoctrineExtensionTest extends TestCase
         $this->assertEquals(PhpArrayAdapter::class, $definition->getClass());
 
         $arguments = $definition->getArguments();
-        $this->assertSame('%kernel.cache_dir%/doctrine/orm/default_metadata.php', $arguments[0]);
+        $this->assertSame('%kernel.build_dir%/doctrine/orm/default_metadata.php', $arguments[0]);
         $wrappedDefinition = $arguments[1];
         $this->assertSame(ArrayAdapter::class, $wrappedDefinition->getClass());
 
@@ -1506,6 +1506,7 @@ class DoctrineExtensionTest extends TestCase
             'kernel.bundles' => $map,
             'kernel.bundles_metadata' => $metadataMap,
             'kernel.cache_dir' => sys_get_temp_dir(),
+            'kernel.build_dir' => sys_get_temp_dir(),
             'kernel.environment' => 'test',
             'kernel.root_dir' => __DIR__ . '/../../', // src dir
         ]));

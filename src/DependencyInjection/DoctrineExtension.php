@@ -1115,7 +1115,7 @@ class DoctrineExtension extends AbstractDoctrineExtension
         $cache = new Definition(ArrayAdapter::class);
 
         if (! $container->getParameter('kernel.debug')) {
-            $phpArrayFile         = '%kernel.cache_dir%' . sprintf('/doctrine/orm/%s_metadata.php', $objectManagerName);
+            $phpArrayFile         = '%kernel.build_dir%' . sprintf('/doctrine/orm/%s_metadata.php', $objectManagerName);
             $cacheWarmerServiceId = $this->getObjectManagerElementName(sprintf('%s_%s', $objectManagerName, 'metadata_cache_warmer'));
 
             $container->register($cacheWarmerServiceId, DoctrineMetadataCacheWarmer::class)
